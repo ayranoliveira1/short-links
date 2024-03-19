@@ -5,6 +5,17 @@ import postgres from "postgres";
 
 const app = fastify();
 
+// Listar links
+app.get("/api/links", async () => {
+   const result = await sql/*sql*/ `
+      SELECT *
+      FROM short_links
+      ORDER BY created_at DESC
+   `;
+
+   return result;
+});
+
 // Criar links
 app.post("/api/links", async (request, reply) => {
    const creatLinksSchema = z.object({
