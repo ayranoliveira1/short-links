@@ -9,3 +9,7 @@
 ###
 
 GET http://localhost:3333/links
+
+###
+
+GEt http://localhost:3333/rocketseat
